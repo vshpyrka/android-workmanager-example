@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.workmanager.WorkManagerActivity">
+
+    <LinearLayout
+        android:id="@+id/status_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            tools:text="Pending" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="#bbb"
+        app:layout_constraintBottom_toBottomOf="@+id/status_container"
+        app:layout_constraintTop_toBottomOf="@+id/status_container" />
+
+    <ScrollView
+        android:id="@+id/actions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".7"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/simple_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Simple Work Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retry_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Simple Retry Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/error_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Simple Error Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/expedited_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Expedited Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/periodic_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Periodic Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/periodic_interval_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Periodic Interval Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/constrained_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Constrained Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/delayed_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Delayed Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/backoff_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Backoff Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tagged_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Tagged Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/input_data_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Input Data Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/unique_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Unique Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/unique_periodic_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Unique Periodic Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/observe_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Observe Task"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/complex_work_query"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Complex Work Query"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/enqueue_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Enqueue Work"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/overwriting_input_merger_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Overwriting input merger Work"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/array_creating_input_merger_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Array creating input merger Work"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/update_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Update Work"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/work_generation"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Work Generation"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/separate_process_work"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Separate Process Work"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cancel_all"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeight"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Cancel all"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

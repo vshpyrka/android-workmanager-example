@@ -548,8 +548,12 @@ class WorkManagerActivity : AppCompatActivity() {
         } else {
             workManager.getWorkInfoByIdLiveData(id)
                 .observe(this) { workInfo ->
-                    val stopReason = getStopReason(workInfo.stopReason)
-                    printStatus("${workInfo.state} ${workInfo.progress} $stopReason")
+                    if (workInfo != null) {
+                        val stopReason = getStopReason(workInfo.stopReason)
+                        printStatus("${workInfo.state} ${workInfo.progress} $stopReason")
+                    } else {
+                        println("AAA workInfo is null")
+                    }
                 }
         }
     }

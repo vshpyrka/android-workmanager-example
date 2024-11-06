@@ -64,7 +64,7 @@ class WorkerTest {
         }
 
         val workInfo = workManager.getWorkInfoByIdFlow(request.id).first()
-        Assert.assertEquals(workInfo.state, WorkInfo.State.RUNNING)
+        Assert.assertEquals(workInfo?.state, WorkInfo.State.RUNNING)
     }
 
     @Test
